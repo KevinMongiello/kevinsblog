@@ -1,12 +1,8 @@
 {
   "assetsByChunkName": {
-    "path---categories-earth-star": [
-      "path---categories-earth-star-3173e589059f6b5cede5.js",
-      "path---categories-earth-star-3173e589059f6b5cede5.js.map"
-    ],
     "path---tags-reflections": [
-      "path---tags-reflections-1977b0b59601a6777124.js",
-      "path---tags-reflections-1977b0b59601a6777124.js.map"
+      "path---tags-reflections-0d3bcbf31856e6999314.js",
+      "path---tags-reflections-0d3bcbf31856e6999314.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -21,20 +17,20 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "path---tags-growth": [
-      "path---tags-growth-b5afedd33651c5ad6ec7.js",
-      "path---tags-growth-b5afedd33651c5ad6ec7.js.map"
+      "path---tags-growth-169991fcf6e14447befc.js",
+      "path---tags-growth-169991fcf6e14447befc.js.map"
     ],
     "component---src-templates-category-jsx": [
       "component---src-templates-category-jsx-afd8b1de7d6cd864664f.js",
       "component---src-templates-category-jsx-afd8b1de7d6cd864664f.js.map"
     ],
     "path---tags-earth-star": [
-      "path---tags-earth-star-879ea85a3466544b76e4.js",
-      "path---tags-earth-star-879ea85a3466544b76e4.js.map"
+      "path---tags-earth-star-0aa0d68b2e071a441bca.js",
+      "path---tags-earth-star-0aa0d68b2e071a441bca.js.map"
     ],
     "path---index": [
-      "path---index-eecf8935c5bfa61c1884.js",
-      "path---index-eecf8935c5bfa61c1884.js.map"
+      "path---index-0e43b65efbb408e0fcb3.js",
+      "path---index-0e43b65efbb408e0fcb3.js.map"
     ],
     "component---src-pages-about-jsx": [
       "component---src-pages-about-jsx-ad03a97f9d94d9bb3877.js",
@@ -71,14 +67,10 @@
       "component---src-pages-index-jsx-09a9ccc379222f56d164.js.map"
     ],
     "app": [
-      "app-774f92f176c7567a4f25.js",
+      "app-02f1626fcaaf9a1a8508.js",
       "build-js-styles.css",
-      "app-774f92f176c7567a4f25.js.map",
+      "app-02f1626fcaaf9a1a8508.js.map",
       "build-js-styles.css.map"
-    ],
-    "path---taking-inventory": [
-      "path---taking-inventory-e1d406a368ffe4a6f8e0.js",
-      "path---taking-inventory-e1d406a368ffe4a6f8e0.js.map"
     ],
     "path---about": [
       "path---about-a0e39f21c11f6a62c5ab.js",
