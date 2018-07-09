@@ -3,8 +3,8 @@ module.exports = {
   siteTitle: "Kevin's Blog", // Site title.
   siteTitleAlt: "Kevin's Blog", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
-  siteUrl: "www.earthstar.online", // Domain of your website without pathPrefix.
-  pathPrefix: "", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
+  siteUrl: "https://github.com/KevinMongiello/kevinsblog", // Domain of your website without pathPrefix.
+  pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.
   fixedFooter: false, // Whether the footer component is fixed, i.e. always visible
   siteDescription: "A personal development blog.", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
