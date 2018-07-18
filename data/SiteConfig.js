@@ -13,8 +13,8 @@ module.exports = {
   disqusShortname: "https-vagr9k-github-io-gatsby-material-starter", // Disqus shortname.
   postDefaultCategoryID: "Tech", // Default category for posts.
   userName: "Kevin Mongiello", // Username to display in the author segment.
-  userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: "Boulder, Colorado", // User location to display in the author segment.
+  userTwitter: "lovegiello", // Optionally renders "Follow Me" in the UserInfo segment.
+  userLocation: "New York, New York", // User location to display in the author segment.
   userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
   userDescription:
     "Hi, I'm a creator, artist, musician, and taste-maker.  I'm here to make a difference in peoples lives by living with integrity and empowering everyone to grow.", // User description to display in the author segment.
