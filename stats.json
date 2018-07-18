@@ -4,6 +4,10 @@
       "path---tags-reflections-0d3bcbf31856e6999314.js",
       "path---tags-reflections-0d3bcbf31856e6999314.js.map"
     ],
+    "path---tags-life-organization": [
+      "path---tags-life-organization-2605992cdb4a3def333f.js",
+      "path---tags-life-organization-2605992cdb4a3def333f.js.map"
+    ],
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
@@ -29,30 +33,34 @@
       "path---tags-earth-star-0aa0d68b2e071a441bca.js.map"
     ],
     "path---index": [
-      "path---index-0e43b65efbb408e0fcb3.js",
-      "path---index-0e43b65efbb408e0fcb3.js.map"
+      "path---index-5cf5aab665a83c74d9b0.js",
+      "path---index-5cf5aab665a83c74d9b0.js.map"
     ],
     "component---src-pages-about-jsx": [
       "component---src-pages-about-jsx-ad03a97f9d94d9bb3877.js",
       "component---src-pages-about-jsx-ad03a97f9d94d9bb3877.js.map"
     ],
     "path---categories-journal": [
-      "path---categories-journal-d77a3dc008797a8a5161.js",
-      "path---categories-journal-d77a3dc008797a8a5161.js.map"
+      "path---categories-journal-82798bb61cac3d724544.js",
+      "path---categories-journal-82798bb61cac3d724544.js.map"
     ],
     "commons": [
-      "commons-6922063063bf0d4cae94.js",
+      "commons-17fb6c46ef1cdfad9332.js",
       "build-js-styles.css",
-      "commons-6922063063bf0d4cae94.js.map",
+      "commons-17fb6c46ef1cdfad9332.js.map",
       "build-js-styles.css.map"
+    ],
+    "path---morning-routine": [
+      "path---morning-routine-a9ee23ba53e4875c319f.js",
+      "path---morning-routine-a9ee23ba53e4875c319f.js.map"
     ],
     "component---src-templates-tag-jsx": [
       "component---src-templates-tag-jsx-c24da4eee13472af99d0.js",
       "component---src-templates-tag-jsx-c24da4eee13472af99d0.js.map"
     ],
     "path---what-skills-should-i-be-working-on": [
-      "path---what-skills-should-i-be-working-on-3c1ba2518aece0dddbfd.js",
-      "path---what-skills-should-i-be-working-on-3c1ba2518aece0dddbfd.js.map"
+      "path---what-skills-should-i-be-working-on-17d5f0c0fd2e13a6e061.js",
+      "path---what-skills-should-i-be-working-on-17d5f0c0fd2e13a6e061.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
@@ -67,9 +75,9 @@
       "component---src-pages-index-jsx-09a9ccc379222f56d164.js.map"
     ],
     "app": [
-      "app-02f1626fcaaf9a1a8508.js",
+      "app-91d14abf9490d6b20393.js",
       "build-js-styles.css",
-      "app-02f1626fcaaf9a1a8508.js.map",
+      "app-91d14abf9490d6b20393.js.map",
       "build-js-styles.css.map"
     ],
     "path---about": [
