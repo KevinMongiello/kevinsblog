@@ -34,7 +34,9 @@
     "react-helmet": "^5.2.0",
     "react-md": "^1.2.9",
     "react-share": "^2.1.0",
-    "react-twitter-widgets": "^1.7.1"
+    "react-twitter-widgets": "^1.7.1",
+    "three": "^0.95.0",
+    "throttle-debounce": "^2.0.1"
   },
   "devDependencies": {
     "cli-glob": "^0.1.0",
