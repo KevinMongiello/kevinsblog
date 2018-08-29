@@ -8,9 +8,6 @@ const randomStartPosition = (coordinates = {}) => ({
 	z: coordinates.z || Math.random() * -8000 - 1000
 });
 
-const STRINGS = ["Entrepreneur","Developer", "Full-Stack", "Music Producer", "Crypto Investor", "Responsive Design", "Mobile-First",
-				"Swag", "Yoga Teacher Training", "Tai-Chi", "Artist", "React", "Javascript", "Redux"];
-
 class Scene extends Component {
 	constructor(props) {
 		super(props);
@@ -38,7 +35,6 @@ class Scene extends Component {
 	}
 
 	componentWillUnmount() {
-		this.stop();
 		this.mount.removeChild(this.renderer.domElement);
 	}
 
@@ -59,6 +55,8 @@ class Scene extends Component {
 
 	sceneRender({ children }) {
 		children.forEach((child) => {
+			if (child.name === "text") return;
+
 			child.position.z += 25
 			if (child.position.z >= this.cameraLength) {
 				this.scene.remove(child);
@@ -105,8 +103,8 @@ class Scene extends Component {
 		this.renderer.setSize( window.innerWidth, window.innerHeight );
 	}
 
-	createText(text) {
-		const textGeometry = new THREE.TextGeometry( text, {
+	createText() {
+		const textGeometry = new THREE.TextGeometry( "Earth Star", {
 			font: this.font,
 			size: 80,
 			height: 10,
@@ -126,27 +124,19 @@ class Scene extends Component {
 
 		this.textMesh = new THREE.Mesh( textGeometry, materials );
 
-		Object.assign(this.textMesh.position, randomStartPosition({ x: 20, y: 30 }));
 		this.textMesh.name = "text";
+		this.textMesh.position.z = 0;
 
 		this.scene.add( this.textMesh );
-	}
-
-	setupText() {
-		for (let i = 0; i < STRINGS.length; i++) {
-			const randomString = STRINGS.splice(Math.round(Math.random() * (STRINGS.length - 1)), 1)[0];
-			this.createText(randomString);
-		}
 	}
 
 	sceneInit() {
 		this.setupSceneAndCamera();
 		this.setupRays();
 		this.setupRenderer();
-		this.setupText();
+		// this.createText();
 
 		this.mount.appendChild(this.renderer.domElement);
-
 
 		window.addEventListener( 'resize', this.onWindowResize, false );
 
@@ -155,8 +145,7 @@ class Scene extends Component {
 	render() {
 		return (
 			<div
-				id="scene-container"
-				style={{ width: '400px', height: '400px' }}
+				style={{ position: "absolute", width: "100%", height: "100%", zIndex: "-1" }}
 				ref={(mount) => { this.mount = mount }}
 			/>
 		);
