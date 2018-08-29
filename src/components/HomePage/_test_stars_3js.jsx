@@ -2,26 +2,38 @@ import React, { Component } from 'react';
 import * as THREE from 'three';
 import helvFont from "./assets/helvetiker_regular.typeface.json";
 
+const randomStartPosition = (coordinates = {}) => ({
+	x: coordinates.x || Math.random() * 4000 - 2000,
+	y: coordinates.y || Math.random() * 4000 - 2000,
+	z: coordinates.z || Math.random() * -8000 - 1000
+});
+
+const STRINGS = ["Entrepreneur","Developer", "Full-Stack", "Music Producer", "Crypto Investor", "Responsive Design", "Mobile-First",
+				"Swag", "Yoga Teacher Training", "Tai-Chi", "Artist", "React", "Javascript", "Redux"];
+
 class Scene extends Component {
 	constructor(props) {
 		super(props);
 
-		this.cameraLength = 10000;
+		this.cameraLength = 500;
 		this.childrenCount = 1000;
 
 		this.sceneInit = this.sceneInit.bind(this);
 		this.onWindowResize = this.onWindowResize.bind(this);
 		this.animate = this.animate.bind(this);
 		this.sceneRender = this.sceneRender.bind(this);
-
-		this.textRotation = 0;
+		this.setupSceneAndCamera = this.setupSceneAndCamera.bind(this);
+		this.setupRays = this.setupRays.bind(this);
+		this.setupRenderer = this.setupRenderer.bind(this);
+		this.createText = this.createText.bind(this);
 
 	}
 
 	componentDidMount() {
 		const loader = new THREE.FontLoader();
 
-		this.sceneInit(loader.parse(helvFont));
+		this.font = loader.parse(helvFont);
+		this.sceneInit();
 		this.animate();
 	}
 
@@ -42,68 +54,62 @@ class Scene extends Component {
 	animate() {
 		requestAnimationFrame( this.animate );
 
-		this.sceneRender();
-
+		this.sceneRender(this.scene);
 	}
 
-	sceneRender() {
-		this.rays.children.forEach((child) => {
-			child.position.y += 25
-			if (child.position.y >= this.cameraLength) {
-				this.rays.remove(child);
+	sceneRender({ children }) {
+		children.forEach((child) => {
+			child.position.z += 25
+			if (child.position.z >= this.cameraLength) {
+				this.scene.remove(child);
 			}
 		})
-		for (let i = 0, rays = this.rays.children.length; i + rays < this.childrenCount; i++) {
+
+		for (let i = 0, rays = children.length; i + rays < this.childrenCount; i++) {
 			this.createNewRay();
 		}
-
-		this.textRotation += 0.033;
-		this.textGroup.rotation.z += Math.sin(this.textRotation) / (-20 * Math.PI) ;
 
 		this.renderer.render( this.scene, this.camera );
 	}
 
 	createNewRay() {
-
 		const object = new THREE.Mesh( this.geometry, new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff, opacity: 0.5 } ) );
-		object.position.x = Math.random() * 4000 - 2000;
-		object.position.y = Math.random() * 8000;
-		object.position.z = Math.random() * 4000 - 2000;
-		object.scale.y = Math.random() * 100 + 1;
+		Object.assign(object.position, randomStartPosition());
+		object.scale.z = Math.random() * 100 + 1;
 
-		this.rays.add( object );
-
+		this.scene.add( object );
 	}
 
-	sceneInit(font) {
-
+	setupSceneAndCamera() {
 		this.camera = new THREE.PerspectiveCamera( 100, window.innerWidth / window.innerHeight, 1, 10000 );
-		this.camera.position.y = this.cameraLength;
+		this.camera.position.z = this.cameraLength;
 		this.camera.lookAt( new THREE.Vector3() );
 
 		this.scene = new THREE.Scene();
 		this.scene.background = new THREE.Color( 0x000 );
+	}
 
-		this.geometry = new THREE.BoxBufferGeometry( 1, 2, 1 );
-
-		this.rays = new THREE.Group();
+	setupRays() {
+		this.geometry = new THREE.BoxBufferGeometry( 1, 1, 2 );
 
 		for ( let i = 0; i < this.childrenCount; i ++ ) {
 			this.createNewRay();
 		}
+	}
 
-		this.scene.add(this.rays);
-
+	setupRenderer() {
 		this.raycaster = new THREE.Raycaster();
 
 		this.renderer = new THREE.WebGLRenderer();
 		this.renderer.setPixelRatio( window.devicePixelRatio );
 		this.renderer.setSize( window.innerWidth, window.innerHeight );
+	}
 
-		const textGeometry = new THREE.TextGeometry( 'Hello three.js!', {
-			font,
+	createText(text) {
+		const textGeometry = new THREE.TextGeometry( text, {
+			font: this.font,
 			size: 80,
-			height: 100,
+			height: 10,
 			curveSegments: 12,
 			bevelEnabled: true,
 			bevelThickness: 10,
@@ -113,8 +119,6 @@ class Scene extends Component {
 
 		textGeometry.computeBoundingBox();
 
-		const centerOffset = -0.5 * ( textGeometry.boundingBox.max.x - textGeometry.boundingBox.min.x );
-
 		const materials = [
 			new THREE.MeshBasicMaterial( { color: Math.random() * 0xffffff, overdraw: 0.5 } ),
 			new THREE.MeshBasicMaterial( { color: 0xf0f0f0, overdraw: 0.5 } )
@@ -122,20 +126,24 @@ class Scene extends Component {
 
 		this.textMesh = new THREE.Mesh( textGeometry, materials );
 
-		this.textMesh.position.x = centerOffset;
-		this.textMesh.position.y = 0;
-		this.textMesh.position.z = 0;
+		Object.assign(this.textMesh.position, randomStartPosition({ x: 20, y: 30 }));
+		this.textMesh.name = "text";
 
-		this.textMesh.rotation.x = - Math.PI / 2;
-		// this.textMesh.rotation.z = Math.PI / 2;
-		this.textMesh.rotation.y = 0;
+		this.scene.add( this.textMesh );
+	}
 
-		this.textGroup = new THREE.Group();
-		this.textGroup.rotation.z = Math.PI / 6
-		this.textGroup.position.y = 8000;
+	setupText() {
+		for (let i = 0; i < STRINGS.length; i++) {
+			const randomString = STRINGS.splice(Math.round(Math.random() * (STRINGS.length - 1)), 1)[0];
+			this.createText(randomString);
+		}
+	}
 
-		this.textGroup.add( this.textMesh );
-		this.scene.add( this.textGroup );
+	sceneInit() {
+		this.setupSceneAndCamera();
+		this.setupRays();
+		this.setupRenderer();
+		this.setupText();
 
 		this.mount.appendChild(this.renderer.domElement);
 
