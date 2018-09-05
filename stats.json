@@ -1,8 +1,16 @@
 {
   "assetsByChunkName": {
+    "path---categories-earth-star": [
+      "path---categories-earth-star-ad429878ef0f008deb69.js",
+      "path---categories-earth-star-ad429878ef0f008deb69.js.map"
+    ],
+    "path---master-consciousness": [
+      "path---master-consciousness-6285f4e44004ec0191b8.js",
+      "path---master-consciousness-6285f4e44004ec0191b8.js.map"
+    ],
     "path---blog": [
-      "path---blog-5cf5aab665a83c74d9b0.js",
-      "path---blog-5cf5aab665a83c74d9b0.js.map"
+      "path---blog-82e0eba4f893f5777f51.js",
+      "path---blog-82e0eba4f893f5777f51.js.map"
     ],
     "path---tags-reflections": [
       "path---tags-reflections-0d3bcbf31856e6999314.js",
@@ -17,8 +25,8 @@
       "path----557518bd178906f8d58a.js.map"
     ],
     "component---src-layouts-index-jsx": [
-      "component---src-layouts-index-jsx-c9dbc6e1351b952514f5.js",
-      "component---src-layouts-index-jsx-c9dbc6e1351b952514f5.js.map"
+      "component---src-layouts-index-jsx-e9de410e246cf6f2b536.js",
+      "component---src-layouts-index-jsx-e9de410e246cf6f2b536.js.map"
     ],
     "component---node-modules-gatsby-plugin-offline-app-shell-js": [
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
@@ -37,8 +45,8 @@
       "path---tags-earth-star-0aa0d68b2e071a441bca.js.map"
     ],
     "path---index": [
-      "path---index-5cf5aab665a83c74d9b0.js",
-      "path---index-5cf5aab665a83c74d9b0.js.map"
+      "path---index-82e0eba4f893f5777f51.js",
+      "path---index-82e0eba4f893f5777f51.js.map"
     ],
     "component---src-pages-about-jsx": [
       "component---src-pages-about-jsx-099d610ed1e64c5ec42c.js",
@@ -83,10 +91,14 @@
       "component---src-pages-index-jsx-18c250321090ce7fce8a.js.map"
     ],
     "app": [
-      "app-c03a61b19befe0ccdbb3.js",
+      "app-4354106e14aaf304d729.js",
       "build-js-styles.css",
-      "app-c03a61b19befe0ccdbb3.js.map",
+      "app-4354106e14aaf304d729.js.map",
       "build-js-styles.css.map"
+    ],
+    "path---tags-purpose": [
+      "path---tags-purpose-37f9fa8b815d01856940.js",
+      "path---tags-purpose-37f9fa8b815d01856940.js.map"
     ],
     "path---about": [
       "path---about-a0e39f21c11f6a62c5ab.js",
