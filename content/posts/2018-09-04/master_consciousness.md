@@ -1,6 +1,6 @@
 ---
 title: "Master Consciousness"
-cover: "https://cdn.pixabay.com/photo/2018/08/09/17/07/soap-bubble-3594979_1280.jpg"
+cover: "https://images.unsplash.com/photo-1510034141778-a4d065653d92?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e45b24be03d6d375ad51287db3f8d961&auto=format&fit=crop&w=2250&q=80"
 date: "September 4th 2018"
 category: "Earth Star"
 tags:
@@ -34,4 +34,4 @@ Into the light I will follow; leading my way.
 What this means is taking the hints from my soul when it knows what to do and actually acting out
 the instructions.  For instance, I just got the hint that it is time to go to bed.  Instead of
 prolonging my bed-time and procrastinating by continued web-surfing, I will take the action to go to bed...
-So, good night :) 
+So, good night :)
